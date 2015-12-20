@@ -6,9 +6,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 1,
-    "start": "2015-12-16T18:34:46.341Z",
-    "end": "2015-12-16T18:34:46.369Z",
-    "duration": 28,
+    "start": "2015-12-20T21:59:37.672Z",
+    "end": "2015-12-20T21:59:37.723Z",
+    "duration": 51,
     "testsRegistered": 2,
     "passPercent": 50,
     "pendingPercent": 0,
@@ -30,7 +30,7 @@
             "title": "Should pass",
             "fullTitle": "Test 1 Should pass",
             "timedOut": false,
-            "duration": 0,
+            "duration": 1,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -38,8 +38,8 @@
             "pending": false,
             "code": "assert.equal(<span class=\"hljs-literal\">true</span>, <span class=\"hljs-literal\">true</span>)",
             "isRoot": false,
-            "uuid": "46be3a4e-c86d-4322-8002-c2b088273206",
-            "parentUUID": "5b5a40e1-53bb-4ec4-92d7-99a52e90a618",
+            "uuid": "ef1b8728-65dd-41ef-9dfc-b5c7cb4b4fcc",
+            "parentUUID": "61c5f536-0735-4dec-93aa-f49076cc7df3",
             "skipped": false
           }
         ],
@@ -47,14 +47,14 @@
         "root": false,
         "_timeout": 2000,
         "file": "/test/users.js",
-        "uuid": "5b5a40e1-53bb-4ec4-92d7-99a52e90a618",
+        "uuid": "61c5f536-0735-4dec-93aa-f49076cc7df3",
         "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
         "passes": [
           {
             "title": "Should pass",
             "fullTitle": "Test 1 Should pass",
             "timedOut": false,
-            "duration": 0,
+            "duration": 1,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -62,8 +62,8 @@
             "pending": false,
             "code": "assert.equal(<span class=\"hljs-literal\">true</span>, <span class=\"hljs-literal\">true</span>)",
             "isRoot": false,
-            "uuid": "46be3a4e-c86d-4322-8002-c2b088273206",
-            "parentUUID": "5b5a40e1-53bb-4ec4-92d7-99a52e90a618",
+            "uuid": "ef1b8728-65dd-41ef-9dfc-b5c7cb4b4fcc",
+            "parentUUID": "61c5f536-0735-4dec-93aa-f49076cc7df3",
             "skipped": false
           }
         ],
@@ -80,7 +80,7 @@
         "hasFailures": false,
         "hasPending": false,
         "hasSkipped": false,
-        "duration": 0
+        "duration": 1
       },
       {
         "title": "Test 2",
@@ -90,7 +90,7 @@
             "title": "Should not pass",
             "fullTitle": "Test 2 Should not pass",
             "timedOut": false,
-            "duration": 1,
+            "duration": 2,
             "state": "failed",
             "pass": false,
             "fail": true,
@@ -102,8 +102,8 @@
               "stack": "AssertionError: <span class=\"hljs-literal\">true</span> == <span class=\"hljs-literal\">false</span><br>    at Context.&lt;anonymous&gt; (test/users.js:<span class=\"hljs-number\">11</span>:<span class=\"hljs-number\">16</span>)"
             },
             "isRoot": false,
-            "uuid": "3eb9b930-4b0d-4701-87c7-10db6b5b07c2",
-            "parentUUID": "39299bb8-452e-43f3-a66a-a332b8260b82",
+            "uuid": "1a552109-6f27-42e4-b8ad-9b1b094c2fcd",
+            "parentUUID": "ad1841c0-95a1-4f5b-b8ce-9bc144be58f5",
             "skipped": false
           }
         ],
@@ -111,7 +111,7 @@
         "root": false,
         "_timeout": 2000,
         "file": "/test/users.js",
-        "uuid": "39299bb8-452e-43f3-a66a-a332b8260b82",
+        "uuid": "ad1841c0-95a1-4f5b-b8ce-9bc144be58f5",
         "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
         "passes": [],
         "failures": [
@@ -119,7 +119,7 @@
             "title": "Should not pass",
             "fullTitle": "Test 2 Should not pass",
             "timedOut": false,
-            "duration": 1,
+            "duration": 2,
             "state": "failed",
             "pass": false,
             "fail": true,
@@ -131,8 +131,8 @@
               "stack": "AssertionError: <span class=\"hljs-literal\">true</span> == <span class=\"hljs-literal\">false</span><br>    at Context.&lt;anonymous&gt; (test/users.js:<span class=\"hljs-number\">11</span>:<span class=\"hljs-number\">16</span>)"
             },
             "isRoot": false,
-            "uuid": "3eb9b930-4b0d-4701-87c7-10db6b5b07c2",
-            "parentUUID": "39299bb8-452e-43f3-a66a-a332b8260b82",
+            "uuid": "1a552109-6f27-42e4-b8ad-9b1b094c2fcd",
+            "parentUUID": "ad1841c0-95a1-4f5b-b8ce-9bc144be58f5",
             "skipped": false
           }
         ],
@@ -148,14 +148,14 @@
         "hasFailures": true,
         "hasPending": false,
         "hasSkipped": false,
-        "duration": 1
+        "duration": 2
       }
     ],
     "tests": [],
     "pending": [],
     "root": true,
     "_timeout": 2000,
-    "uuid": "981eea75-8062-4326-805d-38bb28023a2d",
+    "uuid": "4f7915eb-bcb6-4499-8171-e8512de835dc",
     "fullFile": "",
     "file": "",
     "passes": [],
@@ -180,7 +180,7 @@
       "title": "Should pass",
       "fullTitle": "Test 1 Should pass",
       "timedOut": false,
-      "duration": 0,
+      "duration": 1,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -188,15 +188,15 @@
       "pending": false,
       "code": "assert.equal(<span class=\"hljs-literal\">true</span>, <span class=\"hljs-literal\">true</span>)",
       "isRoot": false,
-      "uuid": "63bef6f6-bb84-4413-a57e-059d2cb5187a",
-      "parentUUID": "5b5a40e1-53bb-4ec4-92d7-99a52e90a618",
+      "uuid": "3d8e6152-f494-480c-ac4e-e4ad2b060d9f",
+      "parentUUID": "61c5f536-0735-4dec-93aa-f49076cc7df3",
       "skipped": false
     },
     {
       "title": "Should not pass",
       "fullTitle": "Test 2 Should not pass",
       "timedOut": false,
-      "duration": 1,
+      "duration": 2,
       "state": "failed",
       "pass": false,
       "fail": true,
@@ -208,8 +208,8 @@
         "stack": "AssertionError: <span class=\"hljs-literal\">true</span> == <span class=\"hljs-literal\">false</span><br>    at Context.&lt;anonymous&gt; (test/users.js:<span class=\"hljs-number\">11</span>:<span class=\"hljs-number\">16</span>)"
       },
       "isRoot": false,
-      "uuid": "f7389486-40e8-4060-ad83-f3063ef079e7",
-      "parentUUID": "39299bb8-452e-43f3-a66a-a332b8260b82",
+      "uuid": "7cd20034-96d3-4ae6-a770-3161f916bd6a",
+      "parentUUID": "ad1841c0-95a1-4f5b-b8ce-9bc144be58f5",
       "skipped": false
     }
   ],
@@ -220,7 +220,7 @@
       "title": "Should pass",
       "fullTitle": "Test 1 Should pass",
       "timedOut": false,
-      "duration": 0,
+      "duration": 1,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -228,8 +228,8 @@
       "pending": false,
       "code": "assert.equal(<span class=\"hljs-literal\">true</span>, <span class=\"hljs-literal\">true</span>)",
       "isRoot": false,
-      "uuid": "6a3853c5-d2db-4092-b14f-c65087840709",
-      "parentUUID": "5b5a40e1-53bb-4ec4-92d7-99a52e90a618",
+      "uuid": "31fac65a-d15d-4ac5-86ff-5b0fc1659b9c",
+      "parentUUID": "61c5f536-0735-4dec-93aa-f49076cc7df3",
       "skipped": false
     }
   ],
@@ -238,7 +238,7 @@
       "title": "Should not pass",
       "fullTitle": "Test 2 Should not pass",
       "timedOut": false,
-      "duration": 1,
+      "duration": 2,
       "state": "failed",
       "pass": false,
       "fail": true,
@@ -250,8 +250,8 @@
         "stack": "AssertionError: <span class=\"hljs-literal\">true</span> == <span class=\"hljs-literal\">false</span><br>    at Context.&lt;anonymous&gt; (test/users.js:<span class=\"hljs-number\">11</span>:<span class=\"hljs-number\">16</span>)"
       },
       "isRoot": false,
-      "uuid": "4e534ef1-96db-4d24-a6cb-50aee6c72880",
-      "parentUUID": "39299bb8-452e-43f3-a66a-a332b8260b82",
+      "uuid": "3d0804bc-b4f9-4965-ac46-a1e1f8917c50",
+      "parentUUID": "ad1841c0-95a1-4f5b-b8ce-9bc144be58f5",
       "skipped": false
     }
   ]

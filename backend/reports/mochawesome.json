@@ -6,9 +6,9 @@
     "passes": 5,
     "pending": 0,
     "failures": 0,
-    "start": "2015-12-21T09:12:52.312Z",
-    "end": "2015-12-21T09:12:52.696Z",
-    "duration": 384,
+    "start": "2015-12-22T13:40:56.396Z",
+    "end": "2015-12-22T13:40:56.778Z",
+    "duration": 382,
     "testsRegistered": 5,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -33,7 +33,7 @@
                 "title": "it should be able to register that user",
                 "fullTitle": "User registration Given a non-existing user it should be able to register that user",
                 "timedOut": false,
-                "duration": 166,
+                "duration": 164,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -41,8 +41,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "7b1e0be9-94c4-410e-8ad1-c2d1640afa4e",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "964fcde2-d6e7-4bbc-88aa-2f695783a143",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -57,15 +57,15 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "c1f967fc-7298-4a76-90e9-2e092ac723b8",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "a4c0fea7-9ebd-4234-87d1-d670c333664c",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
                 "title": "it should return an error if a wrong password is provided",
                 "fullTitle": "User registration Given a non-existing user it should return an error if a wrong password is provided",
                 "timedOut": false,
-                "duration": 14,
+                "duration": 13,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -73,8 +73,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "2d1fa523-b99b-4ffe-90d3-5db1bf4d1380",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "365e4163-22f2-4302-8fc4-3cd7dd884599",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -89,8 +89,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "d79a88b5-8494-40e9-912f-09d1f551b8e2",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "d5d0039d-5a81-4580-b037-94b1c286df2d",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               }
             ],
@@ -98,14 +98,14 @@
             "root": false,
             "_timeout": 2000,
             "file": "/test/users.js",
-            "uuid": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+            "uuid": "5411ec8b-29e1-4525-be2e-a23852700525",
             "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
             "passes": [
               {
                 "title": "it should be able to register that user",
                 "fullTitle": "User registration Given a non-existing user it should be able to register that user",
                 "timedOut": false,
-                "duration": 166,
+                "duration": 164,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -113,8 +113,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "7b1e0be9-94c4-410e-8ad1-c2d1640afa4e",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "964fcde2-d6e7-4bbc-88aa-2f695783a143",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -129,15 +129,15 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "c1f967fc-7298-4a76-90e9-2e092ac723b8",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "a4c0fea7-9ebd-4234-87d1-d670c333664c",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
                 "title": "it should return an error if a wrong password is provided",
                 "fullTitle": "User registration Given a non-existing user it should return an error if a wrong password is provided",
                 "timedOut": false,
-                "duration": 14,
+                "duration": 13,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -145,8 +145,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "2d1fa523-b99b-4ffe-90d3-5db1bf4d1380",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "365e4163-22f2-4302-8fc4-3cd7dd884599",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -161,8 +161,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "d79a88b5-8494-40e9-912f-09d1f551b8e2",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "d5d0039d-5a81-4580-b037-94b1c286df2d",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               }
             ],
@@ -179,7 +179,7 @@
             "hasFailures": false,
             "hasPending": false,
             "hasSkipped": false,
-            "duration": 203
+            "duration": 200
           },
           {
             "title": "Given an existing user",
@@ -197,8 +197,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
                 "isRoot": false,
-                "uuid": "61374a18-86b7-4407-b258-0e835916d71c",
-                "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+                "uuid": "603053a0-f9a2-48f2-8a7a-dcce23c1a6ad",
+                "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
                 "skipped": false
               }
             ],
@@ -206,7 +206,7 @@
             "root": false,
             "_timeout": 2000,
             "file": "/test/users.js",
-            "uuid": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+            "uuid": "0296a336-2962-4e5f-b418-45867972462f",
             "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
             "passes": [
               {
@@ -221,8 +221,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
                 "isRoot": false,
-                "uuid": "61374a18-86b7-4407-b258-0e835916d71c",
-                "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+                "uuid": "603053a0-f9a2-48f2-8a7a-dcce23c1a6ad",
+                "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
                 "skipped": false
               }
             ],
@@ -247,7 +247,7 @@
         "root": false,
         "_timeout": 2000,
         "file": "/test/users.js",
-        "uuid": "f042aabe-20c5-4a29-a717-7f6c622b4bc5",
+        "uuid": "8fc14fa2-9be2-4f65-83eb-847bfe4640ac",
         "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
         "passes": [],
         "failures": [],
@@ -270,7 +270,7 @@
     "pending": [],
     "root": true,
     "_timeout": 2000,
-    "uuid": "0e750386-72fc-43fa-849a-f3c20c450dd5",
+    "uuid": "f85ad43b-ee37-4389-9b03-fa978bf1846d",
     "fullFile": "",
     "file": "",
     "passes": [],
@@ -295,7 +295,7 @@
       "title": "it should be able to register that user",
       "fullTitle": "Given a non-existing user it should be able to register that user",
       "timedOut": false,
-      "duration": 166,
+      "duration": 164,
       "state": "passed",
       "speed": "slow",
       "pass": true,
@@ -303,8 +303,8 @@
       "pending": false,
       "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
       "isRoot": false,
-      "uuid": "e050f601-cddf-41a7-9538-13b3dc7e7f31",
-      "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+      "uuid": "e15ea561-a3c0-48c9-a676-b537913a5401",
+      "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
       "skipped": false
     },
     {
@@ -319,15 +319,15 @@
       "pending": false,
       "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
       "isRoot": false,
-      "uuid": "e599a037-7a6c-40fc-bc87-a6ebee353b3d",
-      "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+      "uuid": "6023fc4b-01d6-4f70-9864-0f438acfe770",
+      "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
       "skipped": false
     },
     {
       "title": "it should return an error if a wrong password is provided",
       "fullTitle": "Given a non-existing user it should return an error if a wrong password is provided",
       "timedOut": false,
-      "duration": 14,
+      "duration": 13,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -335,8 +335,8 @@
       "pending": false,
       "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
       "isRoot": false,
-      "uuid": "fe3463d8-5a04-4414-93a3-f1a568a40678",
-      "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+      "uuid": "15af9efc-f51f-4ff8-84b8-58bb322cb030",
+      "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
       "skipped": false
     },
     {
@@ -351,8 +351,8 @@
       "pending": false,
       "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
       "isRoot": false,
-      "uuid": "63404034-ef8c-4527-a651-f511db48e06b",
-      "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+      "uuid": "44077606-7a07-476c-b812-500b7c1df8f4",
+      "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
       "skipped": false
     },
     {
@@ -367,8 +367,8 @@
       "pending": false,
       "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
       "isRoot": false,
-      "uuid": "72232fab-7c3d-4418-a22a-e75ecb1bd875",
-      "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+      "uuid": "b3c1c074-74b5-4f36-a659-406b84e3a48d",
+      "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
       "skipped": false
     }
   ],
@@ -391,7 +391,7 @@
             "title": "it should be able to register that user",
             "fullTitle": "User registration Given a non-existing user it should be able to register that user",
             "timedOut": false,
-            "duration": 166,
+            "duration": 164,
             "state": "passed",
             "speed": "slow",
             "pass": true,
@@ -399,8 +399,8 @@
             "pending": false,
             "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
             "isRoot": false,
-            "uuid": "7b1e0be9-94c4-410e-8ad1-c2d1640afa4e",
-            "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+            "uuid": "964fcde2-d6e7-4bbc-88aa-2f695783a143",
+            "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
             "skipped": false
           },
           {
@@ -415,15 +415,15 @@
             "pending": false,
             "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
             "isRoot": false,
-            "uuid": "c1f967fc-7298-4a76-90e9-2e092ac723b8",
-            "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+            "uuid": "a4c0fea7-9ebd-4234-87d1-d670c333664c",
+            "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
             "skipped": false
           },
           {
             "title": "it should return an error if a wrong password is provided",
             "fullTitle": "User registration Given a non-existing user it should return an error if a wrong password is provided",
             "timedOut": false,
-            "duration": 14,
+            "duration": 13,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -431,8 +431,8 @@
             "pending": false,
             "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
             "isRoot": false,
-            "uuid": "2d1fa523-b99b-4ffe-90d3-5db1bf4d1380",
-            "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+            "uuid": "365e4163-22f2-4302-8fc4-3cd7dd884599",
+            "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
             "skipped": false
           },
           {
@@ -447,8 +447,8 @@
             "pending": false,
             "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
             "isRoot": false,
-            "uuid": "d79a88b5-8494-40e9-912f-09d1f551b8e2",
-            "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+            "uuid": "d5d0039d-5a81-4580-b037-94b1c286df2d",
+            "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
             "skipped": false
           }
         ],
@@ -456,14 +456,14 @@
         "root": false,
         "_timeout": 2000,
         "file": "/test/users.js",
-        "uuid": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+        "uuid": "5411ec8b-29e1-4525-be2e-a23852700525",
         "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
         "passes": [
           {
             "title": "it should be able to register that user",
             "fullTitle": "User registration Given a non-existing user it should be able to register that user",
             "timedOut": false,
-            "duration": 166,
+            "duration": 164,
             "state": "passed",
             "speed": "slow",
             "pass": true,
@@ -471,8 +471,8 @@
             "pending": false,
             "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
             "isRoot": false,
-            "uuid": "7b1e0be9-94c4-410e-8ad1-c2d1640afa4e",
-            "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+            "uuid": "964fcde2-d6e7-4bbc-88aa-2f695783a143",
+            "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
             "skipped": false
           },
           {
@@ -487,15 +487,15 @@
             "pending": false,
             "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
             "isRoot": false,
-            "uuid": "c1f967fc-7298-4a76-90e9-2e092ac723b8",
-            "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+            "uuid": "a4c0fea7-9ebd-4234-87d1-d670c333664c",
+            "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
             "skipped": false
           },
           {
             "title": "it should return an error if a wrong password is provided",
             "fullTitle": "User registration Given a non-existing user it should return an error if a wrong password is provided",
             "timedOut": false,
-            "duration": 14,
+            "duration": 13,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -503,8 +503,8 @@
             "pending": false,
             "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
             "isRoot": false,
-            "uuid": "2d1fa523-b99b-4ffe-90d3-5db1bf4d1380",
-            "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+            "uuid": "365e4163-22f2-4302-8fc4-3cd7dd884599",
+            "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
             "skipped": false
           },
           {
@@ -519,8 +519,8 @@
             "pending": false,
             "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
             "isRoot": false,
-            "uuid": "d79a88b5-8494-40e9-912f-09d1f551b8e2",
-            "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+            "uuid": "d5d0039d-5a81-4580-b037-94b1c286df2d",
+            "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
             "skipped": false
           }
         ],
@@ -537,7 +537,7 @@
         "hasFailures": false,
         "hasPending": false,
         "hasSkipped": false,
-        "duration": 203
+        "duration": 200
       },
       "ctx": {
         "_runnable": {
@@ -560,7 +560,7 @@
                 "title": "it should be able to register that user",
                 "fullTitle": "User registration Given a non-existing user it should be able to register that user",
                 "timedOut": false,
-                "duration": 166,
+                "duration": 164,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -568,8 +568,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "7b1e0be9-94c4-410e-8ad1-c2d1640afa4e",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "964fcde2-d6e7-4bbc-88aa-2f695783a143",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -584,15 +584,15 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "c1f967fc-7298-4a76-90e9-2e092ac723b8",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "a4c0fea7-9ebd-4234-87d1-d670c333664c",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
                 "title": "it should return an error if a wrong password is provided",
                 "fullTitle": "User registration Given a non-existing user it should return an error if a wrong password is provided",
                 "timedOut": false,
-                "duration": 14,
+                "duration": 13,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -600,8 +600,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "2d1fa523-b99b-4ffe-90d3-5db1bf4d1380",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "365e4163-22f2-4302-8fc4-3cd7dd884599",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -616,8 +616,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "d79a88b5-8494-40e9-912f-09d1f551b8e2",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "d5d0039d-5a81-4580-b037-94b1c286df2d",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               }
             ],
@@ -625,14 +625,14 @@
             "root": false,
             "_timeout": 2000,
             "file": "/test/users.js",
-            "uuid": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+            "uuid": "5411ec8b-29e1-4525-be2e-a23852700525",
             "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
             "passes": [
               {
                 "title": "it should be able to register that user",
                 "fullTitle": "User registration Given a non-existing user it should be able to register that user",
                 "timedOut": false,
-                "duration": 166,
+                "duration": 164,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -640,8 +640,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "7b1e0be9-94c4-410e-8ad1-c2d1640afa4e",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "964fcde2-d6e7-4bbc-88aa-2f695783a143",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -656,15 +656,15 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "c1f967fc-7298-4a76-90e9-2e092ac723b8",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "a4c0fea7-9ebd-4234-87d1-d670c333664c",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
                 "title": "it should return an error if a wrong password is provided",
                 "fullTitle": "User registration Given a non-existing user it should return an error if a wrong password is provided",
                 "timedOut": false,
-                "duration": 14,
+                "duration": 13,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -672,8 +672,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "2d1fa523-b99b-4ffe-90d3-5db1bf4d1380",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "365e4163-22f2-4302-8fc4-3cd7dd884599",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -688,8 +688,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "d79a88b5-8494-40e9-912f-09d1f551b8e2",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "d5d0039d-5a81-4580-b037-94b1c286df2d",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               }
             ],
@@ -706,7 +706,7 @@
             "hasFailures": false,
             "hasPending": false,
             "hasSkipped": false,
-            "duration": 203
+            "duration": 200
           },
           "ctx": "[Circular ~.allHooks.0.ctx]",
           "_events": {},
@@ -717,7 +717,7 @@
             "_idleTimeout": -1,
             "_idlePrev": null,
             "_idleNext": null,
-            "_idleStart": 845,
+            "_idleStart": 862,
             "_onTimeout": null,
             "_repeat": null
           },
@@ -745,7 +745,7 @@
                 "title": "it should be able to register that user",
                 "fullTitle": "User registration Given a non-existing user it should be able to register that user",
                 "timedOut": false,
-                "duration": 166,
+                "duration": 164,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -753,8 +753,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "7b1e0be9-94c4-410e-8ad1-c2d1640afa4e",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "964fcde2-d6e7-4bbc-88aa-2f695783a143",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -769,15 +769,15 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "c1f967fc-7298-4a76-90e9-2e092ac723b8",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "a4c0fea7-9ebd-4234-87d1-d670c333664c",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
                 "title": "it should return an error if a wrong password is provided",
                 "fullTitle": "User registration Given a non-existing user it should return an error if a wrong password is provided",
                 "timedOut": false,
-                "duration": 14,
+                "duration": 13,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -785,8 +785,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "2d1fa523-b99b-4ffe-90d3-5db1bf4d1380",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "365e4163-22f2-4302-8fc4-3cd7dd884599",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -801,8 +801,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "d79a88b5-8494-40e9-912f-09d1f551b8e2",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "d5d0039d-5a81-4580-b037-94b1c286df2d",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               }
             ],
@@ -810,14 +810,14 @@
             "root": false,
             "_timeout": 2000,
             "file": "/test/users.js",
-            "uuid": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+            "uuid": "5411ec8b-29e1-4525-be2e-a23852700525",
             "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
             "passes": [
               {
                 "title": "it should be able to register that user",
                 "fullTitle": "User registration Given a non-existing user it should be able to register that user",
                 "timedOut": false,
-                "duration": 166,
+                "duration": 164,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -825,8 +825,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "7b1e0be9-94c4-410e-8ad1-c2d1640afa4e",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "964fcde2-d6e7-4bbc-88aa-2f695783a143",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -841,15 +841,15 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "c1f967fc-7298-4a76-90e9-2e092ac723b8",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "a4c0fea7-9ebd-4234-87d1-d670c333664c",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
                 "title": "it should return an error if a wrong password is provided",
                 "fullTitle": "User registration Given a non-existing user it should return an error if a wrong password is provided",
                 "timedOut": false,
-                "duration": 14,
+                "duration": 13,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -857,8 +857,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "2d1fa523-b99b-4ffe-90d3-5db1bf4d1380",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "365e4163-22f2-4302-8fc4-3cd7dd884599",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -873,8 +873,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "d79a88b5-8494-40e9-912f-09d1f551b8e2",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "d5d0039d-5a81-4580-b037-94b1c286df2d",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               }
             ],
@@ -891,7 +891,7 @@
             "hasFailures": false,
             "hasPending": false,
             "hasSkipped": false,
-            "duration": 203
+            "duration": 200
           },
           "ctx": "[Circular ~.allHooks.0.ctx]",
           "_events": {},
@@ -902,7 +902,7 @@
             "_idleTimeout": -1,
             "_idlePrev": null,
             "_idleNext": null,
-            "_idleStart": 845,
+            "_idleStart": 862,
             "_onTimeout": null,
             "_repeat": null
           },
@@ -919,7 +919,7 @@
         "_idleTimeout": -1,
         "_idlePrev": null,
         "_idleNext": null,
-        "_idleStart": 543,
+        "_idleStart": 561,
         "_onTimeout": null,
         "_repeat": null
       },
@@ -947,7 +947,7 @@
                 "title": "it should be able to register that user",
                 "fullTitle": "User registration Given a non-existing user it should be able to register that user",
                 "timedOut": false,
-                "duration": 166,
+                "duration": 164,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -955,8 +955,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "7b1e0be9-94c4-410e-8ad1-c2d1640afa4e",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "964fcde2-d6e7-4bbc-88aa-2f695783a143",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -971,15 +971,15 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "c1f967fc-7298-4a76-90e9-2e092ac723b8",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "a4c0fea7-9ebd-4234-87d1-d670c333664c",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
                 "title": "it should return an error if a wrong password is provided",
                 "fullTitle": "User registration Given a non-existing user it should return an error if a wrong password is provided",
                 "timedOut": false,
-                "duration": 14,
+                "duration": 13,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -987,8 +987,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "2d1fa523-b99b-4ffe-90d3-5db1bf4d1380",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "365e4163-22f2-4302-8fc4-3cd7dd884599",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -1003,8 +1003,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "d79a88b5-8494-40e9-912f-09d1f551b8e2",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "d5d0039d-5a81-4580-b037-94b1c286df2d",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               }
             ],
@@ -1012,14 +1012,14 @@
             "root": false,
             "_timeout": 2000,
             "file": "/test/users.js",
-            "uuid": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+            "uuid": "5411ec8b-29e1-4525-be2e-a23852700525",
             "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
             "passes": [
               {
                 "title": "it should be able to register that user",
                 "fullTitle": "User registration Given a non-existing user it should be able to register that user",
                 "timedOut": false,
-                "duration": 166,
+                "duration": 164,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -1027,8 +1027,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "7b1e0be9-94c4-410e-8ad1-c2d1640afa4e",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "964fcde2-d6e7-4bbc-88aa-2f695783a143",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -1043,15 +1043,15 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "c1f967fc-7298-4a76-90e9-2e092ac723b8",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "a4c0fea7-9ebd-4234-87d1-d670c333664c",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
                 "title": "it should return an error if a wrong password is provided",
                 "fullTitle": "User registration Given a non-existing user it should return an error if a wrong password is provided",
                 "timedOut": false,
-                "duration": 14,
+                "duration": 13,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -1059,8 +1059,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "2d1fa523-b99b-4ffe-90d3-5db1bf4d1380",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "365e4163-22f2-4302-8fc4-3cd7dd884599",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -1075,8 +1075,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "d79a88b5-8494-40e9-912f-09d1f551b8e2",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "d5d0039d-5a81-4580-b037-94b1c286df2d",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               }
             ],
@@ -1093,7 +1093,7 @@
             "hasFailures": false,
             "hasPending": false,
             "hasSkipped": false,
-            "duration": 203
+            "duration": 200
           },
           {
             "title": "Given an existing user",
@@ -1111,8 +1111,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
                 "isRoot": false,
-                "uuid": "61374a18-86b7-4407-b258-0e835916d71c",
-                "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+                "uuid": "603053a0-f9a2-48f2-8a7a-dcce23c1a6ad",
+                "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
                 "skipped": false
               }
             ],
@@ -1120,7 +1120,7 @@
             "root": false,
             "_timeout": 2000,
             "file": "/test/users.js",
-            "uuid": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+            "uuid": "0296a336-2962-4e5f-b418-45867972462f",
             "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
             "passes": [
               {
@@ -1135,8 +1135,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
                 "isRoot": false,
-                "uuid": "61374a18-86b7-4407-b258-0e835916d71c",
-                "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+                "uuid": "603053a0-f9a2-48f2-8a7a-dcce23c1a6ad",
+                "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
                 "skipped": false
               }
             ],
@@ -1161,7 +1161,7 @@
         "root": false,
         "_timeout": 2000,
         "file": "/test/users.js",
-        "uuid": "f042aabe-20c5-4a29-a717-7f6c622b4bc5",
+        "uuid": "8fc14fa2-9be2-4f65-83eb-847bfe4640ac",
         "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
         "passes": [],
         "failures": [],
@@ -1191,11 +1191,11 @@
         "_idleTimeout": -1,
         "_idlePrev": null,
         "_idleNext": null,
-        "_idleStart": 910,
+        "_idleStart": 925,
         "_onTimeout": null,
         "_repeat": null
       },
-      "duration": 10,
+      "duration": 12,
       "_error": null
     },
     {
@@ -1219,7 +1219,7 @@
                 "title": "it should be able to register that user",
                 "fullTitle": "User registration Given a non-existing user it should be able to register that user",
                 "timedOut": false,
-                "duration": 166,
+                "duration": 164,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -1227,8 +1227,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "7b1e0be9-94c4-410e-8ad1-c2d1640afa4e",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "964fcde2-d6e7-4bbc-88aa-2f695783a143",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -1243,15 +1243,15 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "c1f967fc-7298-4a76-90e9-2e092ac723b8",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "a4c0fea7-9ebd-4234-87d1-d670c333664c",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
                 "title": "it should return an error if a wrong password is provided",
                 "fullTitle": "User registration Given a non-existing user it should return an error if a wrong password is provided",
                 "timedOut": false,
-                "duration": 14,
+                "duration": 13,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -1259,8 +1259,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "2d1fa523-b99b-4ffe-90d3-5db1bf4d1380",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "365e4163-22f2-4302-8fc4-3cd7dd884599",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -1275,8 +1275,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "d79a88b5-8494-40e9-912f-09d1f551b8e2",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "d5d0039d-5a81-4580-b037-94b1c286df2d",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               }
             ],
@@ -1284,14 +1284,14 @@
             "root": false,
             "_timeout": 2000,
             "file": "/test/users.js",
-            "uuid": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+            "uuid": "5411ec8b-29e1-4525-be2e-a23852700525",
             "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
             "passes": [
               {
                 "title": "it should be able to register that user",
                 "fullTitle": "User registration Given a non-existing user it should be able to register that user",
                 "timedOut": false,
-                "duration": 166,
+                "duration": 164,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -1299,8 +1299,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "7b1e0be9-94c4-410e-8ad1-c2d1640afa4e",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "964fcde2-d6e7-4bbc-88aa-2f695783a143",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -1315,15 +1315,15 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "c1f967fc-7298-4a76-90e9-2e092ac723b8",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "a4c0fea7-9ebd-4234-87d1-d670c333664c",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
                 "title": "it should return an error if a wrong password is provided",
                 "fullTitle": "User registration Given a non-existing user it should return an error if a wrong password is provided",
                 "timedOut": false,
-                "duration": 14,
+                "duration": 13,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -1331,8 +1331,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "2d1fa523-b99b-4ffe-90d3-5db1bf4d1380",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "365e4163-22f2-4302-8fc4-3cd7dd884599",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -1347,8 +1347,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "d79a88b5-8494-40e9-912f-09d1f551b8e2",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "d5d0039d-5a81-4580-b037-94b1c286df2d",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               }
             ],
@@ -1365,7 +1365,7 @@
             "hasFailures": false,
             "hasPending": false,
             "hasSkipped": false,
-            "duration": 203
+            "duration": 200
           },
           {
             "title": "Given an existing user",
@@ -1383,8 +1383,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
                 "isRoot": false,
-                "uuid": "61374a18-86b7-4407-b258-0e835916d71c",
-                "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+                "uuid": "603053a0-f9a2-48f2-8a7a-dcce23c1a6ad",
+                "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
                 "skipped": false
               }
             ],
@@ -1392,7 +1392,7 @@
             "root": false,
             "_timeout": 2000,
             "file": "/test/users.js",
-            "uuid": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+            "uuid": "0296a336-2962-4e5f-b418-45867972462f",
             "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
             "passes": [
               {
@@ -1407,8 +1407,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
                 "isRoot": false,
-                "uuid": "61374a18-86b7-4407-b258-0e835916d71c",
-                "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+                "uuid": "603053a0-f9a2-48f2-8a7a-dcce23c1a6ad",
+                "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
                 "skipped": false
               }
             ],
@@ -1433,7 +1433,7 @@
         "root": false,
         "_timeout": 2000,
         "file": "/test/users.js",
-        "uuid": "f042aabe-20c5-4a29-a717-7f6c622b4bc5",
+        "uuid": "8fc14fa2-9be2-4f65-83eb-847bfe4640ac",
         "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
         "passes": [],
         "failures": [],
@@ -1463,11 +1463,11 @@
         "_idleTimeout": -1,
         "_idlePrev": null,
         "_idleNext": null,
-        "_idleStart": 910,
+        "_idleStart": 925,
         "_onTimeout": null,
         "_repeat": null
       },
-      "duration": 10,
+      "duration": 12,
       "_error": null
     },
     {
@@ -1491,7 +1491,7 @@
                 "title": "it should be able to register that user",
                 "fullTitle": "User registration Given a non-existing user it should be able to register that user",
                 "timedOut": false,
-                "duration": 166,
+                "duration": 164,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -1499,8 +1499,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "7b1e0be9-94c4-410e-8ad1-c2d1640afa4e",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "964fcde2-d6e7-4bbc-88aa-2f695783a143",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -1515,15 +1515,15 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "c1f967fc-7298-4a76-90e9-2e092ac723b8",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "a4c0fea7-9ebd-4234-87d1-d670c333664c",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
                 "title": "it should return an error if a wrong password is provided",
                 "fullTitle": "User registration Given a non-existing user it should return an error if a wrong password is provided",
                 "timedOut": false,
-                "duration": 14,
+                "duration": 13,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -1531,8 +1531,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "2d1fa523-b99b-4ffe-90d3-5db1bf4d1380",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "365e4163-22f2-4302-8fc4-3cd7dd884599",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -1547,8 +1547,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "d79a88b5-8494-40e9-912f-09d1f551b8e2",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "d5d0039d-5a81-4580-b037-94b1c286df2d",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               }
             ],
@@ -1556,14 +1556,14 @@
             "root": false,
             "_timeout": 2000,
             "file": "/test/users.js",
-            "uuid": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+            "uuid": "5411ec8b-29e1-4525-be2e-a23852700525",
             "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
             "passes": [
               {
                 "title": "it should be able to register that user",
                 "fullTitle": "User registration Given a non-existing user it should be able to register that user",
                 "timedOut": false,
-                "duration": 166,
+                "duration": 164,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -1571,8 +1571,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "7b1e0be9-94c4-410e-8ad1-c2d1640afa4e",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "964fcde2-d6e7-4bbc-88aa-2f695783a143",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -1587,15 +1587,15 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "c1f967fc-7298-4a76-90e9-2e092ac723b8",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "a4c0fea7-9ebd-4234-87d1-d670c333664c",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
                 "title": "it should return an error if a wrong password is provided",
                 "fullTitle": "User registration Given a non-existing user it should return an error if a wrong password is provided",
                 "timedOut": false,
-                "duration": 14,
+                "duration": 13,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -1603,8 +1603,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "2d1fa523-b99b-4ffe-90d3-5db1bf4d1380",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "365e4163-22f2-4302-8fc4-3cd7dd884599",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -1619,8 +1619,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "d79a88b5-8494-40e9-912f-09d1f551b8e2",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "d5d0039d-5a81-4580-b037-94b1c286df2d",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               }
             ],
@@ -1637,7 +1637,7 @@
             "hasFailures": false,
             "hasPending": false,
             "hasSkipped": false,
-            "duration": 203
+            "duration": 200
           },
           {
             "title": "Given an existing user",
@@ -1655,8 +1655,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
                 "isRoot": false,
-                "uuid": "61374a18-86b7-4407-b258-0e835916d71c",
-                "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+                "uuid": "603053a0-f9a2-48f2-8a7a-dcce23c1a6ad",
+                "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
                 "skipped": false
               }
             ],
@@ -1664,7 +1664,7 @@
             "root": false,
             "_timeout": 2000,
             "file": "/test/users.js",
-            "uuid": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+            "uuid": "0296a336-2962-4e5f-b418-45867972462f",
             "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
             "passes": [
               {
@@ -1679,8 +1679,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
                 "isRoot": false,
-                "uuid": "61374a18-86b7-4407-b258-0e835916d71c",
-                "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+                "uuid": "603053a0-f9a2-48f2-8a7a-dcce23c1a6ad",
+                "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
                 "skipped": false
               }
             ],
@@ -1705,7 +1705,7 @@
         "root": false,
         "_timeout": 2000,
         "file": "/test/users.js",
-        "uuid": "f042aabe-20c5-4a29-a717-7f6c622b4bc5",
+        "uuid": "8fc14fa2-9be2-4f65-83eb-847bfe4640ac",
         "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
         "passes": [],
         "failures": [],
@@ -1735,11 +1735,11 @@
         "_idleTimeout": -1,
         "_idlePrev": null,
         "_idleNext": null,
-        "_idleStart": 910,
+        "_idleStart": 925,
         "_onTimeout": null,
         "_repeat": null
       },
-      "duration": 10,
+      "duration": 12,
       "_error": null
     },
     {
@@ -1763,7 +1763,7 @@
                 "title": "it should be able to register that user",
                 "fullTitle": "User registration Given a non-existing user it should be able to register that user",
                 "timedOut": false,
-                "duration": 166,
+                "duration": 164,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -1771,8 +1771,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "7b1e0be9-94c4-410e-8ad1-c2d1640afa4e",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "964fcde2-d6e7-4bbc-88aa-2f695783a143",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -1787,15 +1787,15 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "c1f967fc-7298-4a76-90e9-2e092ac723b8",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "a4c0fea7-9ebd-4234-87d1-d670c333664c",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
                 "title": "it should return an error if a wrong password is provided",
                 "fullTitle": "User registration Given a non-existing user it should return an error if a wrong password is provided",
                 "timedOut": false,
-                "duration": 14,
+                "duration": 13,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -1803,8 +1803,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "2d1fa523-b99b-4ffe-90d3-5db1bf4d1380",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "365e4163-22f2-4302-8fc4-3cd7dd884599",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -1819,8 +1819,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "d79a88b5-8494-40e9-912f-09d1f551b8e2",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "d5d0039d-5a81-4580-b037-94b1c286df2d",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               }
             ],
@@ -1828,14 +1828,14 @@
             "root": false,
             "_timeout": 2000,
             "file": "/test/users.js",
-            "uuid": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+            "uuid": "5411ec8b-29e1-4525-be2e-a23852700525",
             "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
             "passes": [
               {
                 "title": "it should be able to register that user",
                 "fullTitle": "User registration Given a non-existing user it should be able to register that user",
                 "timedOut": false,
-                "duration": 166,
+                "duration": 164,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -1843,8 +1843,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "7b1e0be9-94c4-410e-8ad1-c2d1640afa4e",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "964fcde2-d6e7-4bbc-88aa-2f695783a143",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -1859,15 +1859,15 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "c1f967fc-7298-4a76-90e9-2e092ac723b8",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "a4c0fea7-9ebd-4234-87d1-d670c333664c",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
                 "title": "it should return an error if a wrong password is provided",
                 "fullTitle": "User registration Given a non-existing user it should return an error if a wrong password is provided",
                 "timedOut": false,
-                "duration": 14,
+                "duration": 13,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -1875,8 +1875,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "2d1fa523-b99b-4ffe-90d3-5db1bf4d1380",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "365e4163-22f2-4302-8fc4-3cd7dd884599",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -1891,8 +1891,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "d79a88b5-8494-40e9-912f-09d1f551b8e2",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "d5d0039d-5a81-4580-b037-94b1c286df2d",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               }
             ],
@@ -1909,7 +1909,7 @@
             "hasFailures": false,
             "hasPending": false,
             "hasSkipped": false,
-            "duration": 203
+            "duration": 200
           },
           {
             "title": "Given an existing user",
@@ -1927,8 +1927,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
                 "isRoot": false,
-                "uuid": "61374a18-86b7-4407-b258-0e835916d71c",
-                "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+                "uuid": "603053a0-f9a2-48f2-8a7a-dcce23c1a6ad",
+                "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
                 "skipped": false
               }
             ],
@@ -1936,7 +1936,7 @@
             "root": false,
             "_timeout": 2000,
             "file": "/test/users.js",
-            "uuid": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+            "uuid": "0296a336-2962-4e5f-b418-45867972462f",
             "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
             "passes": [
               {
@@ -1951,8 +1951,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
                 "isRoot": false,
-                "uuid": "61374a18-86b7-4407-b258-0e835916d71c",
-                "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+                "uuid": "603053a0-f9a2-48f2-8a7a-dcce23c1a6ad",
+                "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
                 "skipped": false
               }
             ],
@@ -1977,7 +1977,7 @@
         "root": false,
         "_timeout": 2000,
         "file": "/test/users.js",
-        "uuid": "f042aabe-20c5-4a29-a717-7f6c622b4bc5",
+        "uuid": "8fc14fa2-9be2-4f65-83eb-847bfe4640ac",
         "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
         "passes": [],
         "failures": [],
@@ -2007,11 +2007,11 @@
         "_idleTimeout": -1,
         "_idlePrev": null,
         "_idleNext": null,
-        "_idleStart": 910,
+        "_idleStart": 925,
         "_onTimeout": null,
         "_repeat": null
       },
-      "duration": 10,
+      "duration": 12,
       "_error": null
     },
     {
@@ -2040,8 +2040,8 @@
             "pending": false,
             "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
             "isRoot": false,
-            "uuid": "61374a18-86b7-4407-b258-0e835916d71c",
-            "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+            "uuid": "603053a0-f9a2-48f2-8a7a-dcce23c1a6ad",
+            "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
             "skipped": false
           }
         ],
@@ -2049,7 +2049,7 @@
         "root": false,
         "_timeout": 2000,
         "file": "/test/users.js",
-        "uuid": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+        "uuid": "0296a336-2962-4e5f-b418-45867972462f",
         "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
         "passes": [
           {
@@ -2064,8 +2064,8 @@
             "pending": false,
             "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
             "isRoot": false,
-            "uuid": "61374a18-86b7-4407-b258-0e835916d71c",
-            "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+            "uuid": "603053a0-f9a2-48f2-8a7a-dcce23c1a6ad",
+            "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
             "skipped": false
           }
         ],
@@ -2113,8 +2113,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
                 "isRoot": false,
-                "uuid": "61374a18-86b7-4407-b258-0e835916d71c",
-                "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+                "uuid": "603053a0-f9a2-48f2-8a7a-dcce23c1a6ad",
+                "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
                 "skipped": false
               }
             ],
@@ -2122,7 +2122,7 @@
             "root": false,
             "_timeout": 2000,
             "file": "/test/users.js",
-            "uuid": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+            "uuid": "0296a336-2962-4e5f-b418-45867972462f",
             "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
             "passes": [
               {
@@ -2137,8 +2137,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
                 "isRoot": false,
-                "uuid": "61374a18-86b7-4407-b258-0e835916d71c",
-                "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+                "uuid": "603053a0-f9a2-48f2-8a7a-dcce23c1a6ad",
+                "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
                 "skipped": false
               }
             ],
@@ -2166,7 +2166,7 @@
             "_idleTimeout": -1,
             "_idlePrev": null,
             "_idleNext": null,
-            "_idleStart": 877,
+            "_idleStart": 893,
             "_onTimeout": null,
             "_repeat": null
           },
@@ -2202,8 +2202,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
                 "isRoot": false,
-                "uuid": "61374a18-86b7-4407-b258-0e835916d71c",
-                "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+                "uuid": "603053a0-f9a2-48f2-8a7a-dcce23c1a6ad",
+                "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
                 "skipped": false
               }
             ],
@@ -2211,7 +2211,7 @@
             "root": false,
             "_timeout": 2000,
             "file": "/test/users.js",
-            "uuid": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+            "uuid": "0296a336-2962-4e5f-b418-45867972462f",
             "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
             "passes": [
               {
@@ -2226,8 +2226,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
                 "isRoot": false,
-                "uuid": "61374a18-86b7-4407-b258-0e835916d71c",
-                "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+                "uuid": "603053a0-f9a2-48f2-8a7a-dcce23c1a6ad",
+                "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
                 "skipped": false
               }
             ],
@@ -2255,7 +2255,7 @@
             "_idleTimeout": -1,
             "_idlePrev": null,
             "_idleNext": null,
-            "_idleStart": 877,
+            "_idleStart": 893,
             "_onTimeout": null,
             "_repeat": null
           },
@@ -2272,11 +2272,11 @@
         "_idleTimeout": -1,
         "_idlePrev": null,
         "_idleNext": null,
-        "_idleStart": 864,
+        "_idleStart": 879,
         "_onTimeout": null,
         "_repeat": null
       },
-      "duration": 12,
+      "duration": 14,
       "_error": null
     },
     {
@@ -2300,7 +2300,7 @@
                 "title": "it should be able to register that user",
                 "fullTitle": "User registration Given a non-existing user it should be able to register that user",
                 "timedOut": false,
-                "duration": 166,
+                "duration": 164,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -2308,8 +2308,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "7b1e0be9-94c4-410e-8ad1-c2d1640afa4e",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "964fcde2-d6e7-4bbc-88aa-2f695783a143",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -2324,15 +2324,15 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "c1f967fc-7298-4a76-90e9-2e092ac723b8",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "a4c0fea7-9ebd-4234-87d1-d670c333664c",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
                 "title": "it should return an error if a wrong password is provided",
                 "fullTitle": "User registration Given a non-existing user it should return an error if a wrong password is provided",
                 "timedOut": false,
-                "duration": 14,
+                "duration": 13,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -2340,8 +2340,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "2d1fa523-b99b-4ffe-90d3-5db1bf4d1380",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "365e4163-22f2-4302-8fc4-3cd7dd884599",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -2356,8 +2356,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "d79a88b5-8494-40e9-912f-09d1f551b8e2",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "d5d0039d-5a81-4580-b037-94b1c286df2d",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               }
             ],
@@ -2365,14 +2365,14 @@
             "root": false,
             "_timeout": 2000,
             "file": "/test/users.js",
-            "uuid": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+            "uuid": "5411ec8b-29e1-4525-be2e-a23852700525",
             "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
             "passes": [
               {
                 "title": "it should be able to register that user",
                 "fullTitle": "User registration Given a non-existing user it should be able to register that user",
                 "timedOut": false,
-                "duration": 166,
+                "duration": 164,
                 "state": "passed",
                 "speed": "slow",
                 "pass": true,
@@ -2380,8 +2380,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "7b1e0be9-94c4-410e-8ad1-c2d1640afa4e",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "964fcde2-d6e7-4bbc-88aa-2f695783a143",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -2396,15 +2396,15 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "c1f967fc-7298-4a76-90e9-2e092ac723b8",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "a4c0fea7-9ebd-4234-87d1-d670c333664c",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
                 "title": "it should return an error if a wrong password is provided",
                 "fullTitle": "User registration Given a non-existing user it should return an error if a wrong password is provided",
                 "timedOut": false,
-                "duration": 14,
+                "duration": 13,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -2412,8 +2412,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "2d1fa523-b99b-4ffe-90d3-5db1bf4d1380",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "365e4163-22f2-4302-8fc4-3cd7dd884599",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               },
               {
@@ -2428,8 +2428,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
                 "isRoot": false,
-                "uuid": "d79a88b5-8494-40e9-912f-09d1f551b8e2",
-                "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+                "uuid": "d5d0039d-5a81-4580-b037-94b1c286df2d",
+                "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
                 "skipped": false
               }
             ],
@@ -2446,7 +2446,7 @@
             "hasFailures": false,
             "hasPending": false,
             "hasSkipped": false,
-            "duration": 203
+            "duration": 200
           },
           {
             "title": "Given an existing user",
@@ -2464,8 +2464,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
                 "isRoot": false,
-                "uuid": "61374a18-86b7-4407-b258-0e835916d71c",
-                "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+                "uuid": "603053a0-f9a2-48f2-8a7a-dcce23c1a6ad",
+                "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
                 "skipped": false
               }
             ],
@@ -2473,7 +2473,7 @@
             "root": false,
             "_timeout": 2000,
             "file": "/test/users.js",
-            "uuid": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+            "uuid": "0296a336-2962-4e5f-b418-45867972462f",
             "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
             "passes": [
               {
@@ -2488,8 +2488,8 @@
                 "pending": false,
                 "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
                 "isRoot": false,
-                "uuid": "61374a18-86b7-4407-b258-0e835916d71c",
-                "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+                "uuid": "603053a0-f9a2-48f2-8a7a-dcce23c1a6ad",
+                "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
                 "skipped": false
               }
             ],
@@ -2514,7 +2514,7 @@
         "root": false,
         "_timeout": 2000,
         "file": "/test/users.js",
-        "uuid": "f042aabe-20c5-4a29-a717-7f6c622b4bc5",
+        "uuid": "8fc14fa2-9be2-4f65-83eb-847bfe4640ac",
         "fullFile": "/home/travis/build/14Plumes/Hexode/backend/test/users.js",
         "passes": [],
         "failures": [],
@@ -2544,11 +2544,11 @@
         "_idleTimeout": -1,
         "_idlePrev": null,
         "_idleNext": null,
-        "_idleStart": 910,
+        "_idleStart": 925,
         "_onTimeout": null,
         "_repeat": null
       },
-      "duration": 10,
+      "duration": 12,
       "_error": null
     }
   ],
@@ -2558,7 +2558,7 @@
       "title": "it should be able to register that user",
       "fullTitle": "Given a non-existing user it should be able to register that user",
       "timedOut": false,
-      "duration": 166,
+      "duration": 164,
       "state": "passed",
       "speed": "slow",
       "pass": true,
@@ -2566,8 +2566,8 @@
       "pending": false,
       "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">201</span>)<br>                     expect(res.result.id).to.be.ok()<br>                     expect(res.result.token).to.be.ok()<br>                     expect(res.result.username).to.equal(user.username)<br>                     expect(res.result.createdAt).to.be.below(<span class=\"hljs-built_in\">Date</span>.now())<br>                     expect(<span class=\"hljs-built_in\">Object</span>.keys(res.result).length).to.equal(<span class=\"hljs-number\">4</span>)<br>                     done()<br>                 })<br>                 .catch(done)",
       "isRoot": false,
-      "uuid": "c2fd746a-ec76-449f-a21b-0abee6889aae",
-      "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+      "uuid": "ea5a9272-6055-4c23-8843-836315049bd7",
+      "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
       "skipped": false
     },
     {
@@ -2582,15 +2582,15 @@
       "pending": false,
       "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { username: <span class=\"hljs-string\">\"KtorZ\"</span> + invalidExt }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username + invalidExt })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
       "isRoot": false,
-      "uuid": "8eb817fb-e797-4c19-baa9-834b2d5920f5",
-      "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+      "uuid": "4cfbef60-662b-495d-b327-a4f910a41960",
+      "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
       "skipped": false
     },
     {
       "title": "it should return an error if a wrong password is provided",
       "fullTitle": "Given a non-existing user it should return an error if a wrong password is provided",
       "timedOut": false,
-      "duration": 14,
+      "duration": 13,
       "state": "passed",
       "speed": "fast",
       "pass": true,
@@ -2598,8 +2598,8 @@
       "pending": false,
       "code": "done =&gt; {<br>            utils.request(endpoint, <span class=\"hljs-built_in\">Object</span>.assign({}, user, { password: <span class=\"hljs-string\">\"14\"</span> }))<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">0</span>)<br>                            done()<br>                        }))<br>                 })<br>                 .catch(done)",
       "isRoot": false,
-      "uuid": "775da8ca-6302-4b62-a210-0c9670ac7428",
-      "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+      "uuid": "dd2c3443-a119-4e4e-a481-72a6f5371a66",
+      "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
       "skipped": false
     },
     {
@@ -2614,8 +2614,8 @@
       "pending": false,
       "code": "done =&gt; {<br>            utils.request(endpoint)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(400)<br>                     done()<br>                 })<br>                 .catch(done)",
       "isRoot": false,
-      "uuid": "816a7b0f-52ef-429f-9f8b-9406be4fbd03",
-      "parentUUID": "292d3c4c-a2f0-441d-b59f-47db0c5d7bdb",
+      "uuid": "e0baf0d9-64e4-4b8e-bf2e-4c58990c9b29",
+      "parentUUID": "5411ec8b-29e1-4525-be2e-a23852700525",
       "skipped": false
     },
     {
@@ -2630,8 +2630,8 @@
       "pending": false,
       "code": "done =&gt; {<br>            utils.request(endpoint, user)<br>                 .then(res =&gt; {<br>                     expect(res.code).to.equal(<span class=\"hljs-number\">400</span>)<br>                     <span class=\"hljs-keyword\">return</span> utils.mongo(db =&gt; db.collection(<span class=\"hljs-string\">'users'</span>)<br>                        .count({ username: user.username })<br>                        .then(res =&gt; {<br>                            expect(res).to.equal(<span class=\"hljs-number\">1</span>)<br>                            done()<br>                        }))<br>                 })<br>                .catch(done)",
       "isRoot": false,
-      "uuid": "dbf5a843-bc86-454a-8756-e5554c8792b1",
-      "parentUUID": "920db7a9-f2ab-4152-b7f9-418ceadb011e",
+      "uuid": "a340af00-23f0-4dd9-a310-c43c4826930b",
+      "parentUUID": "0296a336-2962-4e5f-b418-45867972462f",
       "skipped": false
     }
   ],

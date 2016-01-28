@@ -146,7 +146,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Game:",
-          "content": "HTTP/1.1 20x OK\n{\n    \"id\": <String>,\n    \"name\": <String>,\n    \"currentPlayerId\": <String>,\n    \"currentRound\": <Number>,\n    \"createdAt\": <Date>,\n    \"board\": {\n        \"tiles\": [{\n            \"id\": <Number>,\n            \"owner\": <String>,\n            \"units\": <Number>\n        }]\n    },\n    \"players\": [{\n        \"id\": <String>,\n        \"units\": <Number>\n    }]\n}",
+          "content": "HTTP/1.1 20x OK\n{\n    \"id\": <String>,\n    \"name\": <String>,\n    \"createdAt\": <Date>,\n    \"deleted\": <Boolean>,\n    \"board\": <String>,\n    \"players\": [{\n        \"id\": <String>,\n        \"username\": <Number>\n    }]\n}",
           "type": "json"
         }
       ]
@@ -326,7 +326,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Game:",
-          "content": "HTTP/1.1 20x OK\n{\n    \"id\": <String>,\n    \"name\": <String>,\n    \"currentPlayerId\": <String>,\n    \"currentRound\": <Number>,\n    \"createdAt\": <Date>,\n    \"board\": {\n        \"tiles\": [{\n            \"id\": <Number>,\n            \"owner\": <String>,\n            \"units\": <Number>\n        }]\n    },\n    \"players\": [{\n        \"id\": <String>,\n        \"units\": <Number>\n    }]\n}",
+          "content": "HTTP/1.1 20x OK\n{\n    \"id\": <String>,\n    \"name\": <String>,\n    \"createdAt\": <Date>,\n    \"deleted\": <Boolean>,\n    \"board\": <String>,\n    \"players\": [{\n        \"id\": <String>,\n        \"username\": <Number>\n    }]\n}",
           "type": "json"
         }
       ]
@@ -396,7 +396,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Games:",
-          "content": "HTTP/1.1 200 OK\n{\n    [{\n        \"id\": <String>,\n        \"name\": <String>,\n        \"currentPlayerId\": <String>,\n        \"currentRound\": <Number>,\n        \"createdAt\": <Date>,\n        \"board\": {\n            \"tiles\": [{\n                \"id\": <Number>,\n                \"owner\": <String>,\n                \"units\": <Number>\n            }]\n        },\n        \"players\": [{\n            \"id\": <String>,\n            \"units\": <Number>\n        }]\n    }]\n}",
+          "content": "HTTP/1.1 200 OK\n{\n    [{\n        \"id\": <String>,\n        \"name\": <String>,\n        \"createdAt\": <Date>,\n        \"deleted\": <Boolean>,\n        \"board\": <String>,\n        \"players\": [{\n            \"id\": <String>,\n            \"username\": <Number>\n        }]\n    }]\n}",
           "type": "json"
         }
       ]
@@ -500,7 +500,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Game:",
-          "content": "HTTP/1.1 20x OK\n{\n    \"id\": <String>,\n    \"name\": <String>,\n    \"currentPlayerId\": <String>,\n    \"currentRound\": <Number>,\n    \"createdAt\": <Date>,\n    \"board\": {\n        \"tiles\": [{\n            \"id\": <Number>,\n            \"owner\": <String>,\n            \"units\": <Number>\n        }]\n    },\n    \"players\": [{\n        \"id\": <String>,\n        \"units\": <Number>\n    }]\n}",
+          "content": "HTTP/1.1 20x OK\n{\n    \"id\": <String>,\n    \"name\": <String>,\n    \"createdAt\": <Date>,\n    \"deleted\": <Boolean>,\n    \"board\": <String>,\n    \"players\": [{\n        \"id\": <String>,\n        \"username\": <Number>\n    }]\n}",
           "type": "json"
         }
       ]
@@ -597,7 +597,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Game:",
-          "content": "HTTP/1.1 20x OK\n{\n    \"id\": <String>,\n    \"name\": <String>,\n    \"currentPlayerId\": <String>,\n    \"currentRound\": <Number>,\n    \"createdAt\": <Date>,\n    \"board\": {\n        \"tiles\": [{\n            \"id\": <Number>,\n            \"owner\": <String>,\n            \"units\": <Number>\n        }]\n    },\n    \"players\": [{\n        \"id\": <String>,\n        \"units\": <Number>\n    }]\n}",
+          "content": "HTTP/1.1 20x OK\n{\n    \"id\": <String>,\n    \"name\": <String>,\n    \"createdAt\": <Date>,\n    \"deleted\": <Boolean>,\n    \"board\": <String>,\n    \"players\": [{\n        \"id\": <String>,\n        \"username\": <Number>\n    }]\n}",
           "type": "json"
         }
       ]
